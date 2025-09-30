@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export function Programs() {
   return (
@@ -27,9 +28,11 @@ export function Programs() {
               </Button>
             </div>
           </div>
-          <div className="relative h-[400px] lg:h-[500px]">
-            <img
-              src="/modern-university-campus.png"
+          <div className="relative h-[800px] lg:h-[800px]">
+            <Image
+              width={800}
+              height={800}
+              src="/imagen2.png"
               alt="Campus UPTMA"
               className="rounded-lg object-cover w-full h-full shadow-2xl"
             />

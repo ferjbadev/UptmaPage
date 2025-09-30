@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export function Hero() {
   return (
@@ -28,8 +29,10 @@ export function Hero() {
             </div>
           </div>
           <div className="relative h-[400px] lg:h-[500px]">
-            <img
-              src="/modern-university-campus.png"
+            <Image
+              width={500}
+              height={500}
+              src="/imagen1.png"
               alt="Campus UPTMA"
               className="rounded-lg object-cover w-full h-full shadow-2xl"
             />
