@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Quote } from "lucide-react"
+import { SimpleAvatar } from "@/components/ui/simple-avatar"
 
 const testimonials = [
   {
@@ -44,15 +44,10 @@ export function Testimonials() {
                 <Quote className="h-8 w-8 text-primary/20" />
                 <p className="text-muted-foreground leading-relaxed text-pretty">{testimonial.quote}</p>
                 <div className="flex items-center gap-4 pt-4">
-                  <Avatar>
-                    <AvatarImage src={testimonial.image || "/placeholder.svg"} alt={testimonial.name} />
-                    <AvatarFallback>
-                      {testimonial.name
-                        .split(" ")
-                        .map((n) => n[0])
-                        .join("")}
-                    </AvatarFallback>
-                  </Avatar>
+                  <SimpleAvatar src={testimonial.image} fallback={testimonial.name
+                    .split(" ")
+                    .map((n) => n[0])
+                    .join("")} />
                   <div>
                     <div className="font-semibold text-foreground">{testimonial.name}</div>
                     <div className="text-sm text-muted-foreground">{testimonial.program}</div>

@@ -2,20 +2,20 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 
-export function Hero() {
+export function Programs() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-secondary to-background py-20 md:py-32">
+    <section id="programas" className="py-20 md:py-32">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-balance leading-tight">
-              Transforma tu futuro en <span className="text-primary">UPTMA</span>
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground text-pretty leading-relaxed">
+        <div className="space-y-12">
+          <div className="text-center space-y-4">
+            <h2 className="text-3xl md:text-4xl font-bold">
+              Nuestros Programas Académicos
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground text-pretty leading-relaxed max-w-3xl mx-auto">
               Universidad Politécnica Territorial del Medio Ambiente. Formando profesionales comprometidos con la
               excelencia académica y el desarrollo sostenible.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex justify-center flex-col sm:flex-row gap-4">
               <Button size="lg" asChild className="text-base">
                 <Link href="#programas">
                   Explorar Programas
