@@ -4,21 +4,21 @@ import { Library, FlaskConical, Wifi, Coffee } from "lucide-react"
 const facilities = [
   {
     icon: Library,
-    title: "Biblioteca Digital",
+    title: "Aulas con Profesores cheveres",
     description: "Acceso a miles de recursos académicos y bases de datos especializadas",
-    image: "/imagen7.png",
+    image: "/imagen7.jpg",
   },
   {
     icon: FlaskConical,
-    title: "Laboratorios",
-    description: "Instalaciones equipadas con tecnología de última generación",
-    image: "/imagen5.png",
+    title: "Clases con maestros Jedi",
+    description: "Instalaciones equipadas con el poder de la fuerza",
+    image: "/imagen5.jpg",
   },
   {
     icon: Wifi,
     title: "Campus Conectado",
     description: "WiFi de alta velocidad en todas las áreas del campus",
-    image: "/imagen6.png",
+    image: "/imagen7.png",
   },
   {
     icon: Coffee,
