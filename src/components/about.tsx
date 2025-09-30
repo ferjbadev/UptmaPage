@@ -1,4 +1,5 @@
 import { Award, Users, Globe, Target } from "lucide-react"
+import Image from "next/image"
 
 const stats = [
   { icon: Users, value: "5,000+", label: "Estudiantes" },
@@ -13,8 +14,10 @@ export function About() {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="relative h-[400px] lg:h-[500px]">
-            <img
-              src="/university-students-studying-together-in-modern-li.jpg"
+            <Image
+              width={500}
+              height={500}
+              src="/imagen3.png"
               alt="Estudiantes UPTMA"
               className="rounded-lg object-cover w-full h-full shadow-xl"
             />

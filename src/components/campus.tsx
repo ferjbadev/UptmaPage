@@ -6,25 +6,25 @@ const facilities = [
     icon: Library,
     title: "Biblioteca Digital",
     description: "Acceso a miles de recursos académicos y bases de datos especializadas",
-    image: "/modern-university-library.png",
+    image: "/imagen7.png",
   },
   {
     icon: FlaskConical,
     title: "Laboratorios",
     description: "Instalaciones equipadas con tecnología de última generación",
-    image: "/university-science-laboratory.jpg",
+    image: "/imagen5.png",
   },
   {
     icon: Wifi,
     title: "Campus Conectado",
     description: "WiFi de alta velocidad en todas las áreas del campus",
-    image: "/students-using-laptops-outdoors.jpg",
+    image: "/imagen6.png",
   },
   {
     icon: Coffee,
     title: "Áreas Comunes",
     description: "Espacios diseñados para el estudio y la convivencia estudiantil",
-    image: "/university-common-area-cafeteria.jpg",
+    image: "/imagen4.png",
   },
 ]
 
