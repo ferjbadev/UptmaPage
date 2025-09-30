@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Quote } from "lucide-react"
 import { SimpleAvatar } from "@/components/ui/simple-avatar"
+import { MotionDiv } from "./motion"
 
 const testimonials = [
   {
@@ -30,34 +31,48 @@ export function Testimonials() {
   return (
     <section id="testimonios" className="py-20 md:py-32 bg-secondary">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <MotionDiv
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-balance">Historias de Éxito</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
             Conoce las experiencias de nuestros egresados que están transformando el mundo
           </p>
-        </div>
+        </MotionDiv>
 
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="relative">
-              <CardContent className="p-6 space-y-4 text-center">
-                <div className="flex justify-center">
-                  <Quote className="h-8 w-8 text-primary/20" />
-                </div>
-                <p className="text-muted-foreground leading-relaxed">{testimonial.quote}</p>
-                <div className="flex flex-col items-center gap-2 pt-4">
-                  <SimpleAvatar 
-                    src={testimonial.image} 
-                    fallback={testimonial.name.split(" ").map(n => n[0]).join("")} 
-                    className="mx-auto"
-                  />
-                  <div>
-                    <div className="font-semibold text-foreground">{testimonial.name}</div>
-                    <div className="text-sm text-muted-foreground">{testimonial.program}</div>
+            <MotionDiv
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <Card className="relative h-full">
+                <CardContent className="p-6 space-y-4 text-center">
+                  <div className="flex justify-center">
+                    <Quote className="h-8 w-8 text-primary/20" />
                   </div>
-                </div>
-              </CardContent>
-            </Card>
+                  <p className="text-muted-foreground leading-relaxed">{testimonial.quote}</p>
+                  <div className="flex flex-col items-center gap-2 pt-4">
+                    <SimpleAvatar
+                      src={testimonial.image}
+                      fallback={testimonial.name.split(" ").map(n => n[0]).join("")}
+                      className="mx-auto"
+                    />
+                    <div>
+                      <div className="font-semibold text-foreground">{testimonial.name}</div>
+                      <div className="text-sm text-muted-foreground">{testimonial.program}</div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </MotionDiv>
           ))}
         </div>
       </div>

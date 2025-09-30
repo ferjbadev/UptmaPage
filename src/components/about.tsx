@@ -1,5 +1,6 @@
 import { Award, Users, Globe, Target } from "lucide-react"
 import Image from "next/image"
+import { MotionDiv } from "./motion"
 
 const stats = [
   { icon: Users, value: "5,000+", label: "Estudiantes" },
@@ -13,7 +14,13 @@ export function About() {
     <section id="nosotros" className="py-20 md:py-32 bg-secondary">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="relative h-[400px] lg:h-[500px]">
+          <MotionDiv
+            className="relative h-[400px] lg:h-[500px]"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
             <Image
               width={500}
               height={500}
@@ -21,9 +28,15 @@ export function About() {
               alt="Estudiantes UPTMA"
               className="rounded-lg object-cover w-full h-full shadow-xl"
             />
-          </div>
+          </MotionDiv>
 
-          <div className="space-y-8">
+          <MotionDiv
+            className="space-y-8"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             <h2 className="text-3xl md:text-5xl text-center font-bold">Sobre UPTMA</h2>
             <p className="text-lg text-muted-foreground text-center leading-relaxed text-pretty">
               La Universidad Politécnica Territorial del Medio Ambiente es una institución comprometida con la formación
@@ -48,7 +61,7 @@ export function About() {
                 )
               })}
             </div>
-          </div>
+          </MotionDiv>
         </div>
       </div>
     </section>

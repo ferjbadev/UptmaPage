@@ -4,10 +4,10 @@ import { GraduationCap, Facebook, Instagram, Twitter, Youtube } from "lucide-rea
 export function Footer() {
   return (
     <footer className="bg-accent text-accent-foreground">
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12 text-center">
         <div className="grid md:grid-cols-4 gap-8">
-          <div className="space-y-4 text-center md:text-left">
-            <div className="flex items-center justify-center md:justify-start gap-2">
+          <div className="space-y-4">
+            <div className="flex items-center justify-center gap-2">
               <GraduationCap className="h-8 w-8" />
               <span className="text-2xl font-bold">UPTMA</span>
             </div>
@@ -16,7 +16,7 @@ export function Footer() {
             </p>
           </div>
 
-          <div className="text-center md:text-left">
+          <div>
             <h3 className="font-semibold mb-4">Programas</h3>
             <ul className="space-y-2 text-sm">
               <li>
@@ -42,7 +42,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="text-center md:text-left">
+          <div>
             <h3 className="font-semibold mb-4">Universidad</h3>
             <ul className="space-y-2 text-sm">
               <li>
@@ -77,9 +77,9 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="text-center md:text-left">
+          <div>
             <h3 className="font-semibold mb-4">Síguenos</h3>
-            <div className="flex justify-center md:justify-start gap-4">
+            <div className="flex justify-center gap-4">
               <Link href="#" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors">
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>

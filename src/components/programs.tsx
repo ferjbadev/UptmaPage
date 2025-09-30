@@ -2,13 +2,20 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { MotionDiv } from "./motion"
 
 export function Programs() {
   return (
     <section id="programas" className="py-20 md:py-32">
       <div className="container mx-auto px-4">
         <div className="space-y-12">
-          <div className="text-center space-y-4">
+          <MotionDiv
+            className="text-center space-y-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
             <h2 className="text-3xl md:text-4xl font-bold">
               Nuestros Programas Académicos
             </h2>
@@ -27,8 +34,14 @@ export function Programs() {
                 <Link href="/portal">Portal Estudiantes</Link>
               </Button>
             </div>
-          </div>
-          <div className="relative h-[800px] lg:h-[800px]">
+          </MotionDiv>
+          <MotionDiv
+            className="relative h-[800px] lg:h-[800px]"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             <Image
               width={800}
               height={800}
@@ -36,7 +49,7 @@ export function Programs() {
               alt="Campus UPTMA"
               className="rounded-lg object-cover w-full h-full shadow-2xl"
             />
-          </div>
+          </MotionDiv>
         </div>
       </div>
     </section>
