@@ -40,14 +40,17 @@ export function Testimonials() {
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="relative">
-              <CardContent className="p-6 space-y-4">
-                <Quote className="h-8 w-8 text-primary/20" />
-                <p className="text-muted-foreground leading-relaxed text-pretty">{testimonial.quote}</p>
-                <div className="flex items-center gap-4 pt-4">
-                  <SimpleAvatar src={testimonial.image} fallback={testimonial.name
-                    .split(" ")
-                    .map((n) => n[0])
-                    .join("")} />
+              <CardContent className="p-6 space-y-4 text-center">
+                <div className="flex justify-center">
+                  <Quote className="h-8 w-8 text-primary/20" />
+                </div>
+                <p className="text-muted-foreground leading-relaxed">{testimonial.quote}</p>
+                <div className="flex flex-col items-center gap-2 pt-4">
+                  <SimpleAvatar 
+                    src={testimonial.image} 
+                    fallback={testimonial.name.split(" ").map(n => n[0]).join("")} 
+                    className="mx-auto"
+                  />
                   <div>
                     <div className="font-semibold text-foreground">{testimonial.name}</div>
                     <div className="text-sm text-muted-foreground">{testimonial.program}</div>

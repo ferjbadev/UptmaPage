@@ -1,27 +1,22 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { Library, FlaskConical, Wifi, Coffee } from "lucide-react"
 
 const facilities = [
   {
-    icon: Library,
     title: "Aulas con Profesores cheveres",
     description: "Acceso a miles de recursos académicos y bases de datos especializadas",
     image: "/imagen7.jpg",
   },
   {
-    icon: FlaskConical,
     title: "Clases con maestros Jedi",
     description: "Instalaciones equipadas con el poder de la fuerza",
     image: "/imagen5.jpg",
   },
   {
-    icon: Wifi,
     title: "Campus Conectado",
     description: "WiFi de alta velocidad en todas las áreas del campus",
     image: "/imagen7.png",
   },
   {
-    icon: Coffee,
     title: "Áreas Comunes",
     description: "Espacios diseñados para el estudio y la convivencia estudiantil",
     image: "/imagen4.png",
@@ -41,7 +36,6 @@ export function Campus() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {facilities.map((facility, index) => {
-            const Icon = facility.icon
             return (
               <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="relative h-48">
@@ -51,10 +45,7 @@ export function Campus() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <CardContent className="p-6 space-y-3">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <Icon className="h-5 w-5 text-primary" />
-                  </div>
+                <CardContent className="p-6 space-y-3 text-center">
                   <h3 className="text-xl font-semibold text-foreground">{facility.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{facility.description}</p>
                 </CardContent>

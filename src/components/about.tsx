@@ -24,12 +24,12 @@ export function About() {
           </div>
 
           <div className="space-y-8">
-            <h2 className="text-3xl md:text-5xl font-bold text-balance">Sobre UPTMA</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed text-pretty">
+            <h2 className="text-3xl md:text-5xl text-center font-bold">Sobre UPTMA</h2>
+            <p className="text-lg text-muted-foreground text-center leading-relaxed text-pretty">
               La Universidad Politécnica Territorial del Medio Ambiente es una institución comprometida con la formación
               integral de profesionales capaces de enfrentar los retos del siglo XXI.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed text-pretty">
+            <p className="text-lg text-muted-foreground text-center leading-relaxed text-pretty">
               Nuestra misión es proporcionar educación de calidad, promover la investigación y contribuir al desarrollo
               sostenible de nuestra región y país.
             </p>
@@ -38,8 +38,10 @@ export function About() {
               {stats.map((stat, index) => {
                 const Icon = stat.icon
                 return (
-                  <div key={index} className="space-y-2">
-                    <Icon className="h-8 w-8 text-primary" />
+                  <div key={index} className="space-y-2 text-center sm:text-left">
+                    <div className="flex justify-center sm:justify-start">
+                      <Icon className="h-8 w-8 text-primary" />
+                    </div>
                     <div className="text-3xl font-bold text-foreground">{stat.value}</div>
                     <div className="text-sm text-muted-foreground">{stat.label}</div>
                   </div>
